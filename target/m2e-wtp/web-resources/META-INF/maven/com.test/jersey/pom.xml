@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.test</groupId>
-  <artifactId>jersey</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>jersey Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-	
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.test</groupId>
+	<artifactId>jersey</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>jersey Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+
 	<properties>
 		<spring.version>4.1.4.RELEASE</spring.version>
 		<spring.security.version>3.2.5.RELEASE</spring.security.version>
@@ -28,17 +28,17 @@
 			<url>http://download.java.net/maven/2/</url>
 		</repository>
 	</repositories>
-	
-	
-	
+
+
+
 	<dependencies>
-	
-	<dependency>
-    <groupId>org.glassfish.jersey.ext</groupId>
-    <artifactId>jersey-mvc-jsp</artifactId>
-    <version>${jersey.version}</version>
-</dependency>
-	<dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.ext</groupId>
+			<artifactId>jersey-mvc-jsp</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.datastax.cassandra</groupId>
 			<artifactId>cassandra-driver-mapping</artifactId>
 			<version>3.1.0</version>
@@ -53,11 +53,11 @@
 			<artifactId>cassandra-driver-extras</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-	<dependency>
-		<groupId>log4j</groupId>
-		<artifactId>log4j</artifactId>
-		<version>${log4j.version}</version>
-	</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
 		<!-- Jersey-Spring http://mvnrepository.com/artifact/org.glassfish.jersey.ext/jersey-spring3/2.4.1 -->
 		<dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
@@ -87,12 +87,12 @@
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-multipart</artifactId>
 			<version>${jersey.version}</version>
-		</dependency>	
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.ext</groupId>
 			<artifactId>jersey-entity-filtering</artifactId>
 			<version>${jersey.version}</version>
-		</dependency>				
+		</dependency>
 
 		<!-- Spring 3 dependencies -->
 		<dependency>
@@ -106,11 +106,11 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 			<exclusions>
-			   <exclusion>
-			      <groupId>commons-logging</groupId>
-			      <artifactId>commons-logging</artifactId>
-			   </exclusion>
-			</exclusions>			
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -141,17 +141,17 @@
 			<artifactId>spring-security-core</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${spring.security.version}</version>
 		</dependency>
-		
+
 		<!-- MySQL JDBC connector -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -186,12 +186,12 @@
 		</dependency>
 
 		<!-- testing -->
-	    <!-- Jersey-client -->
+		<!-- Jersey-client -->
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
 			<artifactId>jersey-client</artifactId>
-			<version>${jersey.version}</version>			
-		</dependency>			
+			<version>${jersey.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>commons-dbcp</groupId>
 			<artifactId>commons-dbcp</artifactId>
@@ -202,7 +202,7 @@
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.1</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -219,64 +219,64 @@
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.8</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
 			<artifactId>jersey-test-framework-provider-external</artifactId>
 			<version>2.5.1</version>
 		</dependency>
-		
-		<!-- LogBack dependencies --> 
+
+		<!-- LogBack dependencies -->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>${logback.version}</version>
 		</dependency>
-		<dependency>                                    
-			<groupId>org.slf4j</groupId>                
-			<artifactId>jcl-over-slf4j</artifactId>     
-			<version>${jcloverslf4j.version}</version>  
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${jcloverslf4j.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-core-asl</artifactId>
 			<version>${jackson.version}</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>${jackson.version}</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-jaxrs</artifactId>
 			<version>${jackson.version}</version>
-		</dependency>	
-		
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
 			<scope>provided</scope>
-		</dependency>			  				
+		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-		    <!-- use the plugin to generate customed war name -->
+			<!-- use the plugin to generate customed war name -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.5</version>
 				<configuration>
 					<warName>${project.artifactId}</warName>
-			        <archive>
-			            <manifest>
-			                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-			                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
-			            </manifest>
-			        </archive>					
+					<archive>
+						<manifest>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+						</manifest>
+					</archive>
 				</configuration>
 				<executions>
 					<execution>
@@ -286,11 +286,33 @@
 						</goals>
 						<inherited>true</inherited>
 					</execution>
-				</executions>				
-			</plugin>		    
-			
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.github.jsimone</groupId>
+									<artifactId>webapp-runner</artifactId>
+									<version>8.0.30.2</version>
+									<destFileName>webapp-runner.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-				
-   
+
+
 </project>  
