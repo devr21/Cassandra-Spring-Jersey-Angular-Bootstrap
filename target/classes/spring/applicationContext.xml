@@ -7,20 +7,20 @@
 
 	<context:component-scan base-package="com.test.jersey.rest.resources" />
 
-	<bean id="bookService" class="com.bookstore.cassandra.rest.service.BookstoreServiceImpl" />
+	<!-- <bean id="bookService" class="com.bookstore.cassandra.rest.service.BookstoreServiceImpl" />
 	<bean id="repository" class="com.bookstore.cassandra.repository.BookstoreCassandraRepository" init-method="init" destroy-method="destroy"></bean>
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<!-- <property name="ignoreUnresolvablePlaceholders" value="true" /> -->
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
 		<property name="locations">
 			<list>
 				<value>classpath:database.properties</value>
 			</list>
 		</property>
-	</bean>
+	</bean> -->
 	
 <!-- 	<bean id="mappingManagerFactory" class="com.bookstore.cassandra.utility.MappingManagerFactory">
 		
 	</bean> -->
-	<bean id="cassConnector" class="com.bookstore.cassandra.utility.CassandraConnector"></bean>
+	<!-- <bean id="cassConnector" class="com.bookstore.cassandra.utility.CassandraConnector"></bean> -->
 </beans>

@@ -30,14 +30,14 @@ import com.bookstore.cassandra.rest.service.BookstoreService;
 @Path("/bookservice")
 public class BookstoreServiceResource {
 
-	@Inject 
-	private BookstoreService bookService;
+	/*@Inject 
+	private BookstoreService bookService;*/
 	
 	@POST
 	@Path("/book")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	public Response createBook( Book book){
-		bookService.createBook(book);
+		/*bookService.createBook(book);*/
         
 		return Response.ok().entity(book).build();
 	}
@@ -46,9 +46,10 @@ public class BookstoreServiceResource {
 	@Path("/getBooks")
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	public Response getBooks(){
-		Collection<Book> books = bookService.getBooks();
+		/*Collection<Book> books = bookService.getBooks();*/
 		
-		return Response.ok().entity(books).build();
+		/*return Response.ok().entity(books).build();*/
+		return Response.ok().build();
 	}
 	
 	@PUT
@@ -56,21 +57,23 @@ public class BookstoreServiceResource {
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	public Response editBook(Book book){
-		return Response.ok().entity(bookService.editBook(book)).build();
+		/*return Response.ok().entity(bookService.editBook(book)).build();*/
+		return Response.ok().build();
 	}
 	
 	@GET
 	@Path("/book/{bookName}")
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	public Response getBookByName(@PathParam("bookName") String bookName){
-		return Response.ok().entity(bookService.getBooksByName(bookName)).build();
+		/*return Response.ok().entity(bookService.getBooksByName(bookName)).build();*/
+		return Response.ok().build();
 	}
 	
 	@DELETE
 	@Path("/book/{id}")
 	public Response deleteBook(@PathParam("id") String id){
 		
-		bookService.deleteBook(id);
+		/*bookService.deleteBook(id);*/
 		
 		return Response.ok().build();
 	}

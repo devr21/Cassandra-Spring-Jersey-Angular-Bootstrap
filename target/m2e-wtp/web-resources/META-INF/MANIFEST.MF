@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: jersey Maven Webapp
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: 16
+Built-By: wii
 Specification-Title: jersey Maven Webapp
 Implementation-Vendor-Id: com.test
 Build-Jdk: 1.8.0_101
